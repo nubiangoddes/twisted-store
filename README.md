@@ -6,6 +6,8 @@ Hand-braided statement hoop earrings — three signature collections, candy-insp
 
 A fully static front-end (HTML / CSS / vanilla JS) plus a single serverless endpoint hook for Stripe Checkout. Deployable as-is to Vercel, Netlify, Cloudflare Pages, or any static host.
 
+> **Image paths are absolute (`/assets/img/...`)** so they resolve correctly regardless of whether Vercel serves a page at `/cart`, `/cart/`, or `/cart.html`. Do not change them to relative.
+
 ```
 .
 ├── index.html                  Homepage (Hero → Quiz → Collections)
