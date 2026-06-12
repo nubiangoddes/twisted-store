@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 100% 97%;
+    --foreground: 280 45% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 280 45% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 280 45% 12%;
+
+    --primary: 332 100% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 268 90% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 38 60% 92%;
+    --muted-foreground: 280 15% 40%;
+
+    --accent: 24 100% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 280 22% 88%;
+    --input: 280 22% 88%;
+    --ring: 332 100% 58%;
+
+    --radius: 1.25rem;
+
+    --cream: 40 100% 97%;
+    --cherry: 345 70% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "ss01";
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient-candy {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-candy {
+    @apply bg-gradient-to-br from-primary via-secondary to-accent;
+  }
+
+  .shadow-pop {
+    box-shadow: 0.4rem 0.4rem 0 0 hsl(var(--foreground));
+  }
+
+  .shadow-pop-pink {
+    box-shadow: 0.5rem 0.5rem 0 0 hsl(var(--primary));
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
